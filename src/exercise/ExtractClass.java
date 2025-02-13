@@ -4,13 +4,13 @@ public class ExtractClass {
 	class Person {
 	  private String name;
 	  private String officeAreaCode;
-	  private String officeNumber;
+	  private PersonData data = new PersonData();
 
-	  public String getName() {
+	public String getName() {
 		return name;
 	  }
 	  public String getTelephoneNumber() {
-		return ("(" + officeAreaCode + ") " + officeNumber);
+		return ("(" + officeAreaCode + ") " + data.officeNumber);
 	  }
 	  public String getOfficeAreaCode() {
 		return officeAreaCode;
@@ -19,10 +19,10 @@ public class ExtractClass {
 		officeAreaCode = arg;
 	  }
 	  public String getOfficeNumber() {
-		return officeNumber;
+		return data.officeNumber;
 	  }
 	  public void setOfficeNumber(String arg) {
-		officeNumber = arg;
+		data.officeNumber = arg;
 	  }
 	}
 }
