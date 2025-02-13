@@ -1,6 +1,6 @@
 package exercise;
 public class ExtractClass {
-// todo extract class TelephoneNumber from class Person
+// to do extract class TelephoneNumber from class Person
 	class Person {
 	  private String name;
 	  private PersonData TelephoneNumber = new PersonData();
@@ -23,5 +23,9 @@ public class ExtractClass {
 	  public void setOfficeNumber(String arg) {
 		TelephoneNumber.officeNumber = arg;
 	  }
+	}
+	
+	class TelephoneNumber{
+		
 	}
 }
