@@ -1,27 +1,44 @@
 package exercise;
 
 public class PreserveObject {
+	public static final int daysTempRange = 0;
+
 	class Room {
 		private int lowest, highest;
 
 		public Room(int lowest, int highest) {
-			this.lowest = lowest;
-			this.highest = highest;
+			this.setLowest(lowest);
+			this.setHighest(highest);
 		}
 
 		// TODO: replace low & high in this withinPlan with preserve whole object
+		public void daysTempRange(HeatingPlan plan) {
+			int low = getLowest();
+			int high = getHighest();
+			return;
+		}
+	
+
 		public boolean withinPlan(HeatingPlan plan) {
-			int low = getLowestTemp();
-			int high = getHighestTemp();
-			return plan.withinRange(low, high);
+			
+			boolean withinPlan =  plan.withinRange(daysTempRange);
+			return withinPlan;
 		}
 
-		private int getHighestTemp() {
+		private int getHighest() {
 			return highest;
 		}
 
-		private int getLowestTemp() {
+		private void setHighest(int highest) {
+			this.highest = highest;
+		}
+
+		private int getLowest() {
 			return lowest;
+		}
+
+		private void setLowest(int lowest) {
+			this.lowest = lowest;
 		}
 
 	}
@@ -31,6 +48,11 @@ public class PreserveObject {
 
 		public HeatingPlan(int from, int to) {
 			range = new TempRange(from, to);
+		}
+
+		public boolean withinRange(int daystemprange) {
+			// TODO Auto-generated method stub
+			return false;
 		}
 
 		public boolean withinRange(int low, int high) {
